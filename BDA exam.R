@@ -20,8 +20,8 @@ ggplot(data = df, aes(x = Price, y = `No. of Bedrooms`)) +
 ggplot(data = df, aes(x = log(Price), y = `No. of Bedrooms`)) +
   geom_point(position = position_jitter(width = 0.1), alpha = 0.5) +
   scale_x_continuous(labels = scales::comma, name = "Log(Price)") +
-  labs(y = "Number of Bedrooms") +
-  plot1 <- ggplot(df, aes(x = Price)) +
+  labs(y = "Number of Bedrooms") 
+plot1 <- ggplot(df, aes(x = Price)) +
   geom_histogram(binwidth = 50000, fill = "skyblue", color = "black", alpha = 0.7) +
   labs(title = "Histogram of Price") +
   scale_x_continuous(labels = scales::comma)
